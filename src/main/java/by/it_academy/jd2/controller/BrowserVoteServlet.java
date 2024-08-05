@@ -29,7 +29,7 @@ public class BrowserVoteServlet extends HttpServlet {
         try{
             voteService.create(new VoteDTO(artist, genre, about));
         } catch (IllegalArgumentException e){
-            writer.write("<p>error': " + e.getMessage() + "</p>");
+            writer.write("<p>error: " + e.getMessage() + "</p>");
         }
     }
 }
