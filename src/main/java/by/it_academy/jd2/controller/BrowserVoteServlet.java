@@ -1,8 +1,8 @@
-package by.it_academy.jd2.controllers;
+package by.it_academy.jd2.controller;
 
 import by.it_academy.jd2.dto.VoteDTO;
-import by.it_academy.jd2.services.VoteService;
-import by.it_academy.jd2.services.api.IVoteService;
+import by.it_academy.jd2.service.VoteService;
+import by.it_academy.jd2.service.api.IVoteService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -18,7 +18,7 @@ public class BrowserVoteServlet extends HttpServlet {
     private final static IVoteService voteService = VoteService.getInstance();
 
     @Override
-    protected void doGet(HttpServletRequest req,
+    protected void doPost(HttpServletRequest req,
                          HttpServletResponse resp)
             throws ServletException, IOException {
         String artist = req.getParameter("artist");
